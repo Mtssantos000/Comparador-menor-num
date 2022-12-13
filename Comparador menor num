@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+float n[5],menor, maior,opcao=9;
+while(opcao!=0){
+    printf("Digite 0 para sair do programa\n");
+    printf("Digite 1 para digitar os numeros\n");
+    scanf("%f",&opcao);
+
+if(opcao==1){
+ for(int cont=0; cont<5; cont++){
+    printf("Digite o %iº número \n",cont+1);
+    scanf("%f",&n[cont]);
+ }// FIM LAÇO FOR
+
+maior = n[0];
+  for(int cont=0; cont < 5; cont++){
+     if(n[cont] > maior){
+       maior = n[cont];
+     }// FIM DO IF
+  }// FIM DO LAÇO FOR
+
+menor=n[0];
+    for(int cont=0; cont<5; cont++){
+        if(n[cont]<menor){
+            menor=n[cont];
+        }//FIM DO IF
+    }//FIM DO LAÇO FOR
+
+    printf("O Maior número digitado foi: %.1f \n", maior);
+    printf("O Menor número digitado foi: %.1f \n", menor);
+}//FIM DO IF
+else if (opcao==0){
+    printf("Até mais\n");
+}
+else{
+    printf("Opção invalida \n");
+}
+}
+
+    return 0;
+}
